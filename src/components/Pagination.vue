@@ -1,14 +1,13 @@
 <template>
     <div>
-        <a v-if="page > 1" @click="go(page - 1)">prev</a>
-        <a
+        <span v-if="page > 1" @click="go(page - 1)">prev</span>
+        <span
             v-for="x in Math.ceil(total / step)"
             :key="x"
             @click="go(x)"
             :class="{ active: x == page }"
-            >{{ x }}</a
-        >
-        <a v-if="total > page * step" @click="go(page + 1)">next</a>
+            >{{ x }}</span>
+        <span v-if="total > page * step" @click="go(page + 1)">next</span>
     </div>
 </template>
 
@@ -34,18 +33,19 @@ div {
     user-select: none;
 }
 
-a {
+span {
     flex: 0 0 auto;
     padding: 5px 10px;
     border-radius: 5px;
     background: #eee;
+    cursor: pointer;
 
     &.active {
         background: #ccc;
     }
 }
 
-a:not(:first-child) {
+span:not(:first-child) {
     margin-left: 15px;
 }
 </style>
