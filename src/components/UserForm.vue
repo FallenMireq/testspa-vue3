@@ -14,7 +14,7 @@
         </div>
         <div class="field">
             <label>Телефон</label>
-            <input type="text" v-model="user.phone" />
+            <PhoneInput v-model="user.phone" />
         </div>
         <div class="field">
             <label>Дистанция</label>
@@ -39,11 +39,13 @@
 import { computed, reactive } from 'vue';
 import DatePicker from './DatePicker.vue';
 import EmailInput from './EmailInput.vue';
+import PhoneInput from './PhoneInput.vue';
 
 export default {
     components: {
         DatePicker,
         EmailInput,
+        PhoneInput,
     },
     setup(props, { emit }) {
         const user = reactive({
