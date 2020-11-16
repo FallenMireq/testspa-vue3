@@ -1,6 +1,6 @@
 {
   "name": "testspa-vue3",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "imask": "^6.0.5",
     "vue": "^3.0.0",
+    "vue-imask": "^6.0.5",
+    "vue2-datepicker": "^4.0.0-beta.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
